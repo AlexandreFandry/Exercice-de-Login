@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url('image.avif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+        .container{
+            border: 1px solid black;
+            background-color: black;
+            border-radius: 40px;
+            width: 600px;
+            height: 300px;
+            margin: 0 auto;
+            padding: 60px;
+            position: absolute;
+            right: 310px;
+            bottom: 140px;
+        }
+        h1{
+            color: bisque;
+            text-align: center;
+            margin-top: -20px;
+        }
+        p{
+            color: aqua;
+            font-size: larger;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        input[type="text"]{
+            border: 1px solid black;
+            padding: 10px;
+            padding-right: 300px;
+            border-radius: 5px;
+            border-color: rgb(10, 117, 204);
+        }
+        input[type="password"]{
+            border: 1px solid black;
+            padding: 10px;
+            padding-right: 300px;
+            border-radius: 5px;
+            border-color: rgb(10, 117, 204);
+        }
+        a{
+            position: absolute;
+            bottom: 25%;
+            margin: 0 150px;
+            color: rgb(190, 4, 4);
+            font-size: 20px;
+            text-decoration: none;
+        }
+        .log{
+            border: 1px solid rgb(19, 223, 53);
+            background-color: rgb(19, 223, 53);
+            border-color: rgb(19, 223, 53);
+            border-radius: 7px;
+            padding: 10px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+        input[value="se connecter"]{
+            font-size: larger;
+        }
+        .inscrire{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            border:none;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
+            transition: background-color 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        .inscrire:hover{
+            background-color: #0056b3;
+        }
+        input[value="s' inscrire"]{
+            font-size: 1em;
+            color: azure;
+        }
+        @keyframes pulse{
+            0%{
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+            }
+            50%{
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(0, 123, 255, 1);
+            }
+            100%{
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="verification.cgi" method="get">
+        <div class="container">
+            <h1>CONNECTEZ-VOUS</h1>
+                <p>Entrer votre nom d' utilisateur :</p>
+                <input type="text" name="user" required>
+                <p>Entrer votre mot de passe :</p>
+                <input type="password" name="password" minlength="4" required></br>
+                <a href="mdp.html">Mot de passe oubliée?</a> 
+                <input class="log" type="submit" value="se connecter">
+        </div>
+    </form>
+    <form action="enregistre.html" method="get">
+        <header>
+            <div>
+                <input class="inscrire" type="submit" value="s' inscrire">
+            </div>
+        </header>
+    </form>
+</body>
+</html>
