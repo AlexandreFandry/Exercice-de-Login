@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url('image.avif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+        .container{
+            border: 1px solid black;
+            background-color: black;
+            border-radius: 40px;
+            width: 600px;
+            height: 300px;
+            margin: 0 auto;
+            padding: 60px;
+            position: absolute;
+            right: 310px;
+            bottom: 140px;
+        }
+        h1{
+            color: bisque;
+            text-align: center;
+            margin-top: -20px;
+        }
+        p{
+            color: aqua;
+            font-size: larger;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        input[type="text"]{
+            border: 1px solid black;
+            padding: 10px;
+            padding-right: 300px;
+            border-radius: 5px;
+            border-color: rgb(10, 117, 204);
+        }
+        input[type="password"]{
+            border: 1px solid black;
+            padding: 10px;
+            padding-right: 300px;
+            border-radius: 5px;
+            border-color: rgb(10, 117, 204);
+        }
+        .log{
+            border: 1px solid rgb(19, 223, 53);
+            background-color: rgb(19, 223, 53);
+            border-color: rgb(19, 223, 53);
+            border-radius: 7px;
+            padding: 10px;
+            position: absolute;
+            bottom: 20px;
+        }
+        input[value="Confirmer"]{
+            font-size: larger;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <form action="confirm.cgi" method="get">
+        <div class="container">
+            <h1>INSCRIVEZ-VOUS</h1>
+                <p>Entrer votre nom d' utilisateur :</p>
+                <input type="text" name="user" required>
+                <p>Entrer votre mot de passe :</p>
+                <input type="password" name="password" minlength="4" required>
+                <input class="log" type="submit" value="Confirmer"> 
+        </div>
+    </form>
+</body>
+</html>
